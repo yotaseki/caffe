@@ -1,5 +1,5 @@
-train_net: "models/voc-fcn8s/train.prototxt"
-test_net: "models/voc-fcn8s/val.prototxt"
+train_net: "models/whiteline10-fcn8s/train.prototxt"
+test_net: "models/whiteline10-fcn8s/val.prototxt"
 test_iter: 736
 # make test net, but don't invoke it from the solver itself
 test_interval: 999999999
