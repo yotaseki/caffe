@@ -30,5 +30,5 @@ function C = getProcessedImage( IMAGE )
     end
     %C{1,1} = sparse(Seg.i,Seg.j,Seg.s,rows, cols);
     C{1,1} = Seg;
-    C{1,2} = sparse(Bnd.i,Bnd.j,Bnd.s,rows, cols);
+    C{1,2} = logical(sparse(Bnd.i,Bnd.j,Bnd.s,rows, cols));
 end
