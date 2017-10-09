@@ -1,12 +1,11 @@
-function MakeAnnotation(image_path)
+function MakeAnnotation(CLASS_NUM,CLASS,image_path)
 
 IMG = imread(image_path);
 fn = strsplit(image_path,'/');
 fn = strsplit(fn{1,length(fn)},'.');
 disp(fn)
 [IMG_ROW, IMG_COLUMN] = size(IMG);
-CLASS = 1;          % whiteline
-CLASS_NUM = 1;
+IMG_COLUMN = IMG_COLUMN /3 ;
 
 processed = getProcessedImage(IMG);
 Segmentation = uint8(processed{1,1});
