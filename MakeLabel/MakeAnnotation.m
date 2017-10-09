@@ -26,19 +26,19 @@ GTcls.Segmentation = Segmentation;
 GTcls.CategoriesPresent = CLASS;
 
 %%% GTinst
+GTinst.Segmentation = double(Segmentation);
 GTinst.Boundaries = cell(1,1);
 GTinst.Boundaries{1,1} = Boundaries;
-GTinst.Segmentation = Segmentation;
 GTinst.Categories = CLASS;
 
-figure
-image(IMG)
-figure
-spy(GTcls.Boundaries{1,1})
-figure
-spy(GTcls.Segmentation)
+%figure
+%image(IMG)
+%figure
+%spy(GTcls.Boundaries{1,1})
+%figure
+%spy(GTcls.Segmentation)
 
-save('../cls/'+string(fn{1,1})+'.mat','GTcls');
-save('../inst/'+string(fn{1,1})+'.mat','GTinst');
+save('out/cls/'+string(fn{1,1})+'.mat','GTcls');
+save('out/inst/'+string(fn{1,1})+'.mat','GTinst');
 
 end
