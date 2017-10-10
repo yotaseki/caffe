@@ -18,11 +18,11 @@ for i = 1:CLASS_NUM
         disp(['CLASS :' num2str(i)]);
         GTcls.Boundaries{i,1} = Boundaries;
     else
-        GTcls.Boundaries{i,1} = sparse(IMG_ROW,IMG_COLUMN);
+        GTcls.Boundaries{i,1} = logical(sparse(IMG_ROW,IMG_COLUMN));
     end
 end
 GTcls.Segmentation = Segmentation;
-GTcls.CategoriesPresent = CLASS;
+GTcls.CategoriesPresent = CLASS_NUM;
 
 %%% GTinst
 GTinst.Segmentation = double(Segmentation);
