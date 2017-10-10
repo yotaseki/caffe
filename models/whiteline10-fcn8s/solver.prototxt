@@ -1,10 +1,10 @@
 train_net: "models/whiteline10-fcn8s/train.prototxt"
-test_net: "models/whiteline10-fcn8s/val.prototxt"
+#test_net: "models/whiteline10-fcn8s/val.prototxt"
 #train_net: "models/voc-fcn8s/train.prototxt"
 #test_net: "models/voc-fcn8s/val.prototxt"
-test_iter: 736
+#test_iter: 736
 # make test net, but don't invoke it from the solver itself
-test_interval: 999999999
+#test_interval: 999999999
 display: 20
 average_loss: 20
 lr_policy: "fixed"
@@ -17,5 +17,5 @@ iter_size: 1
 max_iter: 100000
 weight_decay: 0.0005
 snapshot: 4000
-snapshot_prefix: "snapshot/train"
-test_initialization: false
+snapshot_prefix: "snapshot/whiteline10"
+#test_initialization: false
