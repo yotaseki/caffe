@@ -24,8 +24,10 @@ in_ = in_.transpose((2,0,1))
 # net = caffe.Net('voc-fcn32s/deploy.prototxt', 'voc-fcn32s/fcn32s-heavy-pascal.caffemodel', caffe.TEST)
 # net = caffe.Net('pascalcontext-fcn32s/deploy.prototxt', 'pascalcontext-fcn32s/pascalcontext-fcn32s-heavy.caffemodel', caffe.TEST)
 net = caffe.Net(
-        'models/whiteline10_20cls-fcn8s/deploy.prototxt',
-        'models/whiteline10_20cls-fcn8s/whiteline10_20cls_iter_100000.caffemodel',
+        'models/whiteline10-fcn8s/deploy.prototxt',
+        'models/whiteline10-fcn8s/whiteline10_iter_50000.caffemodel',
+#        'models/voc-fcn8s/deploy.prototxt',
+#        'models/voc-fcn8s/fcn8s-heavy-pascal.caffemodel',
         #'rgb_voc_fcn32s/deploy.prototxt', 
         #'rgb_voc_fcn32s/train_iter_4000.caffemodel', 
         caffe.TEST
