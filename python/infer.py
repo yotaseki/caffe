@@ -23,13 +23,11 @@ in_ = in_.transpose((2,0,1))
 # net = caffe.Net('voc-fcn8s/deploy.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
 # net = caffe.Net('voc-fcn32s/deploy.prototxt', 'voc-fcn32s/fcn32s-heavy-pascal.caffemodel', caffe.TEST)
 # net = caffe.Net('pascalcontext-fcn32s/deploy.prototxt', 'pascalcontext-fcn32s/pascalcontext-fcn32s-heavy.caffemodel', caffe.TEST)
+deploy = "fixed_SoccerField3D_Blur_Bleeding.fcn-8s-digits/deploy.prototxt"
+model = "fixed_SoccerField3D_Blur_Bleeding.fcn-8s-digits/snapshot_iter_10010.caffemodel"
 net = caffe.Net(
-        'models/whiteline10-fcn8s/deploy.prototxt',
-        'models/whiteline10-fcn8s/whiteline10_iter_50000.caffemodel',
-#        'models/voc-fcn8s/deploy.prototxt',
-#        'models/voc-fcn8s/fcn8s-heavy-pascal.caffemodel',
-        #'rgb_voc_fcn32s/deploy.prototxt', 
-        #'rgb_voc_fcn32s/train_iter_4000.caffemodel', 
+        deploy,
+        model,
         caffe.TEST
         )
 
